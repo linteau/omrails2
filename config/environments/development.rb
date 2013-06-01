@@ -34,4 +34,12 @@ Omrails2::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Define default url options for devise aka have to do this for devise to work
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  # Adjust this so that devise will work in production on heroku
+  # In production, :host should be set to the actual host of your application.
+  # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
 end
